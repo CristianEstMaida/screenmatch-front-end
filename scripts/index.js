@@ -20,10 +20,13 @@ function crearListaPeliculas(elemento, datos) {
 
     const ul = document.createElement('ul');
     ul.className = 'lista';
-    const basePath = window.location.pathname.split('/')[1];
+    const basePath = window.location.hostname.includes('github.io')
+  ? '/screenmatch-front-end/'
+  : '/';
+
     const listaHTML = datos.map((pelicula) => `
         <li>
-            <a href="/${basePath}/detalles.html?id=${pelicula.id}">
+            <a href="${basePath}detalles.html?id=${pelicula.id}">
                 <img src="${pelicula.poster}" alt="${pelicula.titulo}">
             </a>
         </li>
