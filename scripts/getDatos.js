@@ -1,5 +1,7 @@
 // URL base da API
-const baseURL = 'http://localhost:8080';
+const baseURL = window.location.hostname.includes('localhost')
+  ? 'http://localhost:8080'
+  : 'https://screenmatch-backend.onrender.com';
 
 export default function getDatos(endpoint) {
     return fetch(`${baseURL}${endpoint}`)
