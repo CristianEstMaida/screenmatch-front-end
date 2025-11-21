@@ -2,7 +2,7 @@ name: Scheduled Backend Ping
 
 on:
   schedule:
-    - cron: '*/14 * * * *'  # cada 10 minutos
+    - cron: '*/14 * * * *'
   workflow_dispatch:
 
 jobs:
